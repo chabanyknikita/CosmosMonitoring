@@ -69,7 +69,7 @@ services:
     restart: unless-stopped
     volumes:
       - grafana_data:/var/lib/grafana
-      - ./grafana/provisioning:/etc/grafana/provisioning
+      - ./grafana:/etc/grafana
     ports:
       - 3000:3000
     networks:
