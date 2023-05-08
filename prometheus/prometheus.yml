@@ -9,8 +9,8 @@ alerting:
     - targets: ['alert_manager:9093']
 
 rule_files:
-  - server_alerts.yml
-  - cosmos_alerts.yml
+  - alerts_for_node.yml
+  - alerts_for_server.yml
 
 
 scrape_configs:
