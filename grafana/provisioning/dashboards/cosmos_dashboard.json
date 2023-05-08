@@ -547,6 +547,7 @@
             "mode": "thresholds"
           },
           "decimals": 2,
+          "displayName": "Block Size",
           "mappings": [],
           "min": 0,
           "thresholds": {
@@ -597,7 +598,6 @@
           "refId": "A"
         }
       ],
-      "title": "Block Size",
       "type": "stat"
     },
     {
@@ -1789,7 +1789,7 @@
     "list": [
       {
         "current": {
-          "selected": true,
+          "selected": false,
           "text": "uptick_7000-2",
           "value": "uptick_7000-2"
         },
@@ -1883,6 +1883,6 @@
   "timezone": "",
   "title": "Cosmos-based Chains Dashboard",
   "uid": "UJyurCTWz",
-  "version": 5,
+  "version": 7,
   "weekStart": ""
 }
