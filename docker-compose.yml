@@ -51,13 +51,13 @@ services:
 
   alertmanager:
     container_name: alert_manager
-    image: prom/alertmanager:latest
+    image: prom/alerts_manager:latest
     restart: unless-stopped
     volumes:
-      - ./alertmanager/:/etc/alertmanager/
+      - ./alerts_manager/:/etc/alerts_manager/
     command:
-      - '--config.file=/etc/alertmanager/config.yml'
-      - '--storage.path=/alertmanager'
+      - '--config.file=/etc/alerts_manager/config.yml'
+      - '--storage.path=/alerts_manager'
     expose:
       - 9093
     networks:
