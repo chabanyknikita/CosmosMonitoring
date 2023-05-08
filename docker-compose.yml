@@ -51,13 +51,13 @@ services:
 
   alertmanager:
     container_name: alert_manager
-    image: prom/alerts_manager:latest
+    image: prom/alertmanager:latest
     restart: unless-stopped
     volumes:
-      - ./alerts_manager/:/etc/alerts_manager/
+      - ./alertmanager/:/etc/alertmanager/
     command:
-      - '--config.file=/etc/alerts_manager/config.yml'
-      - '--storage.path=/alerts_manager'
+      - '--config.file=/etc/alertmanager/config.yml'
+      - '--storage.path=/alertmanager'
     expose:
       - 9093
     networks:
@@ -71,7 +71,7 @@ services:
       - grafana_data:/var/lib/grafana
       - ./grafana/provisioning:/etc/grafana/provisioning
     ports:
-      - 3000:3000
+      - 8888:3000
     networks:
       - monitoring
     depends_on:
